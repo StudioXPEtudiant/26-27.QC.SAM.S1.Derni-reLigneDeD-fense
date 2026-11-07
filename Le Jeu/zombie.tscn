@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://kuhnwfdpbx30"]
+
+[ext_resource type="Script" uid="uid://vdgdfqmqj12r" path="res://zombie.gd" id="1_uiaus"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_050lg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_roy8y"]
+
+[node name="zombie" type="CharacterBody2D" unique_id=2080322500]
+script = ExtResource("1_uiaus")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=471853165]
+shape = SubResource("CapsuleShape2D_050lg")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=662249137]
+scale = Vector2(14.084203, 24.12153)
+mesh = SubResource("BoxMesh_roy8y")

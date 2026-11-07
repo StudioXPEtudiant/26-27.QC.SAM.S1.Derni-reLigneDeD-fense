@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://bpicwyej12ewc"]
+
+[ext_resource type="Script" uid="uid://c24cg8w3lug8c" path="res://perso_princip.gd" id="1_s7bg2"]
+[ext_resource type="Script" uid="uid://b3dlou1wyvwaj" path="res://fusi.gd" id="2_30ryl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfquo"]
+size = Vector2(3.3115516, 8.586678)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s7bg2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30ryl"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_1bn7i"]
+material = SubResource("StandardMaterial3D_30ryl")
+
+[node name="PP" type="CharacterBody2D" unique_id=1597792541]
+scale = Vector2(4.831572, 4.030135)
+script = ExtResource("1_s7bg2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1404259566]
+position = Vector2(1.001358e-05, 0)
+shape = SubResource("RectangleShape2D_sfquo")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1955330022]
+position = Vector2(0, 2.3082938)
+scale = Vector2(0.01311899, 0.06261374)
+
+[node name="Body" type="Node2D" parent="." unique_id=832601195]
+position = Vector2(1.001358e-05, 2.3082936)
+
+[node name="Pied G" type="MeshInstance2D" parent="Body" unique_id=1347014189]
+position = Vector2(-0.8278879, 1.7369144)
+scale = Vector2(1, 0.5)
+mesh = SubResource("BoxMesh_s7bg2")
+
+[node name="Pied D" type="MeshInstance2D" parent="Body" unique_id=1857768799]
+position = Vector2(0.8278879, 1.7369144)
+scale = Vector2(1, 0.5)
+mesh = SubResource("BoxMesh_s7bg2")
+
+[node name="Jambe D" type="MeshInstance2D" parent="Body" unique_id=1277168674]
+position = Vector2(0.6209159, 0.49626118)
+scale = Vector2(0.41394398, 1.9869144)
+mesh = SubResource("BoxMesh_s7bg2")
+
+[node name="Jambe G" type="MeshInstance2D" parent="Body" unique_id=1535289489]
+position = Vector2(-0.6209159, 0.49626127)
+scale = Vector2(0.41394398, 1.9869144)
+mesh = SubResource("BoxMesh_s7bg2")
+
+[node name="Corps" type="MeshInstance2D" parent="Body" unique_id=1469784653]
+position = Vector2(3.5527137e-15, -2.4813063)
+scale = Vector2(1.6557757, 3.9700902)
+mesh = SubResource("BoxMesh_s7bg2")
+
+[node name="Bras D" type="MeshInstance2D" parent="Body" unique_id=1939215401]
+position = Vector2(1.2418319, -2.9775677)
+scale = Vector2(0.36889967, 2.6209223)
+mesh = SubResource("BoxMesh_s7bg2")
+
+[node name="Bras G" type="MeshInstance2D" parent="Body" unique_id=360046623]
+position = Vector2(-1.2418317, -2.9775674)
+scale = Vector2(0.36889967, 2.6209223)
+mesh = SubResource("BoxMesh_s7bg2")
+
+[node name="Cou" type="MeshInstance2D" parent="Body" unique_id=334528534]
+position = Vector2(0, -4.7144823)
+scale = Vector2(0.6209159, 0.49626127)
+mesh = SubResource("BoxMesh_s7bg2")
+
+[node name="Épaule D" type="MeshInstance2D" parent="Body" unique_id=1502550866]
+position = Vector2(0.82788795, -4.218221)
+scale = Vector2(0.6209159, 0.49626127)
+mesh = SubResource("BoxMesh_s7bg2")
+
+[node name="Épaule G" type="MeshInstance2D" parent="Body" unique_id=2064932598]
+position = Vector2(-0.82788795, -4.2182207)
+scale = Vector2(0.6209159, 0.49626127)
+mesh = SubResource("BoxMesh_s7bg2")
+
+[node name="Tête" type="MeshInstance2D" parent="Body" unique_id=1833725359]
+position = Vector2(0, -5.7070045)
+scale = Vector2(1.2418319, 1.4887838)
+mesh = SubResource("BoxMesh_s7bg2")
+
+[node name="Fusi" type="MeshInstance2D" parent="." unique_id=1650835454]
+position = Vector2(-2.0697198, 0)
+scale = Vector2(4, 0.5)
+mesh = SubResource("QuadMesh_1bn7i")
+script = ExtResource("2_30ryl")

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://2i40l6ds35ry"]
+
+[ext_resource type="Texture2D" uid="uid://chgwsbdn6qy4k" path="res://006769c5eeeb379b63cb537b06023a6a.jpg" id="1_3h1ab"]
+[ext_resource type="Script" uid="uid://cuqclccv8vso" path="res://map.gd" id="1_8qak7"]
+[ext_resource type="Texture2D" uid="uid://msx17bgq4jkc" path="res://47be2315bd49f08af7a29f40a1bf4830.jpg" id="2_7if1s"]
+[ext_resource type="Texture2D" uid="uid://jbd1vb05t6sf" path="res://14e60c937c57528793055ecdd0ae366d.jpg" id="3_v6avs"]
+[ext_resource type="PackedScene" uid="uid://bpicwyej12ewc" path="res://Perso_Princip.tscn" id="4_7if1s"]
+[ext_resource type="PackedScene" uid="uid://kuhnwfdpbx30" path="res://zombie.tscn" id="5_v6avs"]
+
+[node name="Node2D" type="Node2D" unique_id=767941520]
+script = ExtResource("1_8qak7")
+
+[node name="Image" type="Node2D" parent="." unique_id=1386566404]
+
+[node name="006769c5Eeeb379b63Cb537b06023a6a" type="Sprite2D" parent="Image" unique_id=658316233]
+position = Vector2(15.5, 326.00003)
+scale = Vector2(0.415, 0.5584192)
+texture = ExtResource("1_3h1ab")
+
+[node name="47Be2315Bd49f08Af7a29f40a1Bf4830" type="Sprite2D" parent="Image" unique_id=983016432]
+position = Vector2(638.99994, 335.00003)
+rotation = 1.5676306
+scale = Vector2(1.1915494, 0.9459459)
+texture = ExtResource("2_7if1s")
+
+[node name="14e60c937c57528793055Ecdd0Ae366d" type="Sprite2D" parent="Image" unique_id=1952324258]
+position = Vector2(1614.9999, 326)
+rotation = -3.1389782
+scale = Vector2(0.83700496, 0.6851523)
+texture = ExtResource("3_v6avs")
+
+[node name="PP" parent="Image" unique_id=1597792541 instance=ExtResource("4_7if1s")]
+position = Vector2(588, 340)
+
+[node name="Maison" type="Node2D" parent="." unique_id=1841998015 groups=["Target"]]
+position = Vector2(1196, 352)
+
+[node name="zombie" parent="." unique_id=2080322500 instance=ExtResource("5_v6avs")]
+position = Vector2(-15, 366)
